@@ -226,7 +226,7 @@ int main(int argc, char *argv[]) {
             node.utemp = (node.dtemp + node.ctemp_a + node.ctemp_b)/3.0;
 
             // Display temp
-            printf("Process #%d: current temperature %f\n", node.pid, node.dtemp);
+            printf("Process #%d: current temperature %f\n", node.pid, node.utemp);
 
             // Send uptemp to parent
             mq_send(mqp, (const char *) &node.utemp, 0x8, 0);
